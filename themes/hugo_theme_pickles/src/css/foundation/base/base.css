@@ -64,6 +64,21 @@ a {
   }
 }
 
+.btn {
+  display: inline-block;
+  background: #6EFF92;
+  border-radius: 90px;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-family: monospace;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(110,255,146, .25);
+}
+
+
 ul {
   & li {
     list-style: disc;
@@ -150,26 +165,280 @@ section {
 }
 
 
-/*rio mod*/
-.quick-start {
+/*rio mod and helpers*/
+.col-md-4.quick-start {
   border-left: solid thin linear-gradient(#00FFFF, #6EFF92);
   border-width: 3px;
   border-style: solid;
   border-image: linear-gradient(to bottom, #00FFFF, #6EFF92) 1 100%;
   border-right: none;
   margin: 40px 0;
-}
-
-.quick-start .row {
+  /*padding-left: 8.33333333%;*/
+  padding-left: 4%;
   position: relative;
 }
-.quick-start .col-md-1:before {
+
+.quick-start hr {
+  margin: 8% 0;
+}
+
+.quick-start h3 {
+  position: relative;
+}
+
+.quick-start h3:before {
   content: "";
   height: 3px;
   background: #37FFC9;
   width: 25px;
   position: absolute;
-  top: 15px;
+  top: 20px;
+  left: -14%;
   display: inline-block;
   vertical-align: middle;
+}
+.text-center {
+  text-align: center;
+}
+
+
+/*terminal*/
+p.code {
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 2s steps(90, end);
+}
+
+p.code:nth-child(2) {
+  animation: type2 2s steps(1, end);
+}
+
+p.code:nth-child(3) {
+  animation: type3 3s steps(1, end);
+}
+
+p.code:nth-child(4) {
+  animation: type4 4s steps(1, end);
+}
+
+p.code:nth-child(5) {
+  animation: type5 7s steps(300, end);
+}
+
+p.code:nth-child(6) {
+  animation: type6 7s steps(1, end);
+}
+
+p.code:nth-child(7) {
+  animation: type7 8s steps(1, end);
+}
+
+p.code:nth-child(8) {
+  animation: type8 9s steps(1, end);
+}
+
+p.code:nth-child(9) {
+  animation: type9 11s steps(300, end);
+}
+
+p.code:nth-child(10) {
+  animation: type10 12s steps(1, end);
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes type4 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes type5 {
+  0% {
+    width: 0;
+  }
+  66% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes type6 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes type7 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes type8 {
+  0% {
+    width: 0;
+  }
+  85% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes type9 {
+  0% {
+    width: 0;
+  }
+  85% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes type10 {
+  0% {
+    width: 0;
+  }
+  85% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+.code-return {
+  color: #fff;
+}
+
+.window {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 405px;
+/*  max-width: 440px;*/
+}
+
+.lid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #1A1A1A, #000);
+/*   box-shadow: inset 1px -4px 6px rgba(145, 161, 181, 0.3); */
+}
+
+.window-close {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  left: 2%;
+  margin-left: calc(8px / -2);
+  border-radius: 50%;
+  background: #ff0000;
+}
+
+.window-minimize {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  left: 4%;
+  margin-left: calc(8px / -2);
+  border-radius: 50%;
+  background: #f2c94c;
+}
+
+.window-full {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  left: 6%;
+  margin-left: calc(8px / -2);
+  border-radius: 50%;
+  background: #6fcf97;
+}
+
+.screen {
+  color: #6fcf97;
+  font-family: "Fira Mono", "Courier";
+  font-size: 0.75rem;
+  position: absolute;
+  top: 24px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  border-radius: 2px 2px 8px 8px;
+  box-shadow: -1px 1px 6px rgba(171, 183, 204, 0.2);
+  background: #333333;
+}
+
+.screen .code {
+  font-size: 1.25rem;
 }
