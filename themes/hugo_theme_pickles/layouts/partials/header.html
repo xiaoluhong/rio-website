@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<body>
+  <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+  {{ partial "svgpack-sprite.html" . }}
+  <header class="l-header">
+    <div class="logo">
+      <svg id="rio-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396.6 144.1">
+          <path class="logo" fill="url(#pattern)" d="M180.1 0c-1.1 0-2.1.9-2.1 2.1v140c0 1.1.9 2.1 2.1 2.1s2.1-.9 2.1-2.1V2.1c-.1-1.2-1-2.1-2.1-2.1zM71.5 78.8c20.2-1.8 36-18.7 36-39.3C107.6 17.7 89.9 0 68.1 0h-66C.9 0 0 .9 0 2.1v140c0 1.1.9 2.1 2.1 2.1s2.1-.9 2.1-2.1V79H67l36.8 64.1c.4.6 1 1 1.8 1 .4 0 .7-.1 1-.3 1-.6 1.3-1.8.8-2.8L71.5 78.8zm-3.4-4h-64V4.1h64c19.5 0 35.4 15.9 35.4 35.4S87.6 74.8 68.1 74.8zM324.6 0c-39.7 0-72 32.3-72 72s32.3 72 72 72 72-32.3 72-72-32.3-72-72-72zm0 4.1c37.5 0 67.9 30.5 67.9 67.9s-30.4 68-67.9 68-67.9-30.5-67.9-67.9 30.4-68 67.9-68z"/>
+
+          <defs>
+          <!-- Da gradient -->
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0">
+            <stop offset="0%" style="stop-color:#6EFF92;"/>
+            <stop offset="50%" style="stop-color:#00FFFF;"/>
+            <stop offset="100%" style="stop-color:#6EFF92;"/>
+          </linearGradient>
+
+          <!-- Stitch 2 gradients together for seamless animation  -->
+          <pattern id="pattern" x="0" y="0" width="300%" height="100%" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="150%" height="100%" fill="url(#gradient)">
+              <animate attributeType="XML"
+                       attributeName="x"
+                       from="0" to="150%"
+                       dur="3s"
+                       repeatCount="indefinite"/>
+            </rect>
+            <rect x="-150%" y="0" width="150%" height="100%" fill="url(#gradient)">
+              <animate attributeType="XML"
+                       attributeName="x"
+                       from="-150%" to="0"
+                       dur="3s"
+                       repeatCount="indefinite"/>
+            </rect>
+          </pattern>
+        </defs>
+      </svg>
+    </div>
+
+
+  {{ with .Site.Params.subtitle }}
+    <div class="row center-xs">
+    <p class="col-md-6 p-subtitle">
+      {{ . }}
+    </p>
+    </div>
+  {{ end }}
+  </header>
+  <img src="/images/wave.svg"/>
+  <main id="main" class="l-main">
