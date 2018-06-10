@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+<div class="row">
+  <aside class="col-md-4">
+    <nav class="sidebar-nav">
+      <ul>
+        {{ $currentPage := . }}
+          {{ range .Site.Menus.sidemenu }}
+          <li><a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "sidemenu" .) ($currentPage.HasMenuCurrent "sidemenu" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </aside>
+  <div class="col-md-8">
+    <h2 class="c-title p-tag-title">Docs list: {{ .Title }}</h2>
+    {{ range $index, $page := (.Paginate (where .Data.Pages "Type" "posts")).Pages }}
+      {{ if ne $index 0 }}
+      {{ end }}
+      {{ .Render "li" }}
+    {{ end }}
+  </div>
+</div>
+
+{{ partial "pagination.html" .Paginator }}
+{{ partial "siteinfo.html" . }}
+{{ partial "footer.html" . }}
+

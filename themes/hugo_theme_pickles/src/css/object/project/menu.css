@@ -1,5 +1,5 @@
 .p-menu {
-  margin-top: 40px;
+  margin-top: 20px;
   &__lists {
     display: block;
     flex-wrap: wrap;
@@ -17,6 +17,7 @@
     }
     & a {
       padding-bottom: 4px;
+      color: white;
       &:hover {
         border-bottom: 1px solid currentColor;
       }

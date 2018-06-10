@@ -203,6 +203,7 @@ section {
 
 
 /*terminal*/
+
 p.code {
   margin: 10px 0 0 10px;
   white-space: nowrap;
@@ -380,6 +381,8 @@ p.code:nth-child(10) {
   display: inline-block;
   width: 100%;
   height: 405px;
+  box-shadow: 0 0 20px rgba(255,255,255,.05);
+  border-radius: 2px 2px 8px 8px;
 /*  max-width: 440px;*/
 }
 
@@ -435,7 +438,7 @@ p.code:nth-child(10) {
   left: 1px;
   right: 1px;
   border-radius: 2px 2px 8px 8px;
-  box-shadow: -1px 1px 6px rgba(171, 183, 204, 0.2);
+  box-shadow: inset 0 0 10px #000000;
   background: #333333;
 }
 
