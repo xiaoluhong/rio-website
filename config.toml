@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/rio-site/"
 languageCode = "en-us"
 title = "Rio"
 theme = "hugo_theme_pickles"
