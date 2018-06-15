@@ -1,5 +1,5 @@
 ---
-title: "single page"
+title: "single"
 date: 2017-09-08T11:34:02-07:00
 description: "description"
 ---

@@ -9,7 +9,7 @@ html {
 body {
   color: var(--color-text);
   font-size: 1.0rem;
-  font-family: var(--SanFrancisco);
+  font-family: var(--Poppins);
   line-height: 1.57;
   background: linear-gradient(rgb(50, 50, 50), rgb(30, 30, 30));
 }
@@ -23,7 +23,7 @@ hr {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: 300;
-  font-family: var(--OpenSans);
+  font-family: var(--Barlow);
   color: #888;
   margin-top: 0;
 }
@@ -199,6 +199,20 @@ section {
 }
 .text-center {
   text-align: center;
+}
+
+.sidebar-left {
+  border-right: solid 1px;
+  border-color: transparent #000  transparent #474747
+}
+
+/*sidebar nav*/
+.sidebar-nav .sidebar-nav-item {
+  display: block;
+  font-size: 2em;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: white;
 }
 
 

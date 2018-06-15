@@ -1,10 +1,14 @@
 .p-article {
+
   &__thumbnail {
     margin-top: 24px;
   }
   &__body {
     margin: 40px 0 30px;
     word-wrap: break-word;
+    padding-left: 25%;
+    padding-right: 25%;
+
     @media (--sm) {
       margin: 40px 0 60px;
     }

@@ -1,4 +1,4 @@
-baseURL = "/rio-site/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Rio"
 theme = "hugo_theme_pickles"
@@ -40,31 +40,27 @@ theme = "hugo_theme_pickles"
   favicon = "/images/favicon.png"
 
 [[menu.main]]
-    name = "listPage"
-    url = "/listPage"
+    name = "Documentation"
+    url = "/docs"
     weight = 1
 
 [[menu.main]]
-    parent = "listPage"
-    name = "single"
-    url = "/listPage/single"
-    weight = 1
+    #parent = "docs"
+    #name = "single"
+    #url = "/docs/single"
+    #weight = 1
 
 [[menu.main]]
-    parent = "listPage"
-    name = "single2"
-    url = "/listPage/single2"
-    weight = 2
+    #parent = "docs"
+    #name = "single2"
+    #url = "/docs/single2"
+    #weight = 2
 
 [[menu.main]]
     name = "About"
     url = "/about"
     weight = 2
 
-[[menu.main]]
-    identifier = "theme"
-    name = "/theme"
-    weight = 3
 
 sectionPagesMenu = "sidemenu"
 

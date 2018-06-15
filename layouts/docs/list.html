@@ -1,14 +1,13 @@
 {{ partial "header.html" . }}
-<div class="row">
-  <aside class="col-md-4">
-    <nav class="sidebar-nav">
-      <ul>
-        {{ $currentPage := . }}
-          {{ range .Site.Menus.sidemenu }}
-          <li><a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "sidemenu" .) ($currentPage.HasMenuCurrent "sidemenu" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
-        {{ end }}
-      </ul>
-    </nav>
+<div class="row between-md">
+  <aside class="col-md-3 sidebar-left">
+  <nav class="sidebar-nav">
+  {{ $currentPage := . }}
+    {{ range where .Site.Pages "Section" "docs"}}
+      <a class="sidebar-nav-item" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{end}}
+  </nav>
+
   </aside>
   <div class="col-md-8">
     <h2 class="c-title p-tag-title">Docs list: {{ .Title }}</h2>
