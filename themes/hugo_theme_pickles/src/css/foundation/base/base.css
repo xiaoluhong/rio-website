@@ -3,13 +3,13 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 75%;
 }
 
 body {
   color: var(--color-text);
   font-size: 1.0rem;
-  font-family: var(--Poppins);
+  font-family: var(--Barlow);
   line-height: 1.57;
   background: linear-gradient(rgb(50, 50, 50), rgb(30, 30, 30));
 }
@@ -23,42 +23,55 @@ hr {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: 300;
-  font-family: var(--Barlow);
-  color: rgba(255,255,255,.75);
+  font-family: var(--Poppins);
+  color: rgba(255,255,255,.35);
   margin-top: 0;
 }
 
 h1 {
   font-size: 3.2rem;
+  margin-bottom: .5em;
 }
 
 h2 {
   font-size: 2.8rem;
+  margin-bottom: .5em;
 }
 
 h3 {
   font-size: 2.4rem;
+  margin-bottom: .5em;
 }
 
 h4 {
   font-size: 2.0rem;
+  margin-bottom: .5em;
 }
 
 h5 {
   font-size: 1.8rem;
+  margin-bottom: .5em;
 }
 
 h6 {
   font-size: 1.6rem;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--accent-color);
+  margin-bottom: 0;
 }
 
 p {
   font-size: 1.6rem;
+  margin: .5em 0;
+  letter-spacing: .05em;
 }
 
 a {
   color: var(--link-color);
   text-decoration: underline;
+  transition: ease-in-out all 300ms;
 
   &:hover {
     color: var(--link-hover);
@@ -67,11 +80,17 @@ a {
 
 .btn {
   display: inline-block;
+  color: #3d3d3d;
   background: #6EFF92;
   border-radius: 90px;
   padding: 10px 20px;
   font-size: 2em;
   font-family: monospace;
+  text-decoration: none;
+
+  &:hover {
+    background: #58CC75;
+    }
 }
 
 ::selection {
@@ -167,6 +186,10 @@ section {
 
 
 /*rio mod and helpers*/
+.spacer {
+  padding: 1rem;
+}
+
 .col-md-4.quick-start {
   border-left: solid thin linear-gradient(#00FFFF, #6EFF92);
   border-width: 3px;
@@ -191,10 +214,10 @@ section {
   content: "";
   height: 3px;
   background: #37FFC9;
-  width: 25px;
+  width: 45px;
   position: absolute;
   top: 20px;
-  left: -14%;
+  left: -65px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -459,4 +482,9 @@ p.code:nth-child(10) {
 
 .screen .code {
   font-size: 1.25rem;
+}
+
+.row {
+  margin-right: 0!important;
+  shape-margin: 0!important;
 }

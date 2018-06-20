@@ -18,6 +18,9 @@
     & a {
       padding-bottom: 4px;
       color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .5px;
       &:hover {
         border-bottom: 1px solid currentColor;
       }

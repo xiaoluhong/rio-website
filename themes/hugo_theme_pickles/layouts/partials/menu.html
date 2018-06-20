@@ -1,5 +1,5 @@
 {{ if .Site.Menus.main }}
-<nav class="l-nav p-menu">
+<nav>
   <ul class="p-menu__lists">
     {{ range .Site.Menus.main.ByWeight }}
       {{ if .HasChildren }}
@@ -7,7 +7,7 @@
           <span>{{ .Name }}</span>
           <ul>
             {{ range .Children }}
-              <li class="p-menu__listitem p-menu__child"><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+              <li class="p-menu__listitem p-menu__child"><a href="{{ .URL | relLangURL }}" {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} class="active"{{ end }}>{{ .Name }}</a></li>
             {{ end }}
           </ul>
         </li>
@@ -22,3 +22,4 @@
   </ul>
 </nav>
 {{ end }}
+
