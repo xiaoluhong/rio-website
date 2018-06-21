@@ -40,26 +40,19 @@ theme = "hugo_theme_pickles"
   favicon = "/images/favicon.png"
 
 [[menu.main]]
-    name = "Documentation"
-    url = "/docs"
+    name = "Home"
+    url = "/"
     weight = 1
 
-[[menu.main]]
-    #parent = "docs"
-    #name = "single"
-    #url = "/docs/single"
-    #weight = 1
-
-[[menu.main]]
-    #parent = "docs"
-    #name = "single2"
-    #url = "/docs/single2"
-    #weight = 2
+    [[menu.main]]
+    name = "Documentation"
+    url = "/docs"
+    weight = 2
 
 [[menu.main]]
     name = "About"
     url = "/about"
-    weight = 2
+    weight = 3
 
 
 sectionPagesMenu = "sidemenu"

@@ -25,6 +25,12 @@
     </p>
   </footer>
 
+  <script src="/js/rellax.min.js"></script>
+  <script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
+  </script>
+
   {{ if not .Site.IsServer }}
     {{ with .Site.Params.ga_api_key }}
     <script>

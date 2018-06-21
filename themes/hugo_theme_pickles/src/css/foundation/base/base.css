@@ -190,6 +190,20 @@ section {
   padding: 1rem;
 }
 
+.download img {
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+.download a {
+  padding: 40px 15px 10px 15px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .col-md-4.quick-start {
   border-left: solid thin linear-gradient(#00FFFF, #6EFF92);
   border-width: 3px;
