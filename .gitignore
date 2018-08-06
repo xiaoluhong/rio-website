@@ -1,0 +1,8 @@
+/data/favorite_tweets.json
+/public
+/static
+/node_modules
+package-lock.json
+yarn.lock
+*.tern-port
+*/**/.tern-port

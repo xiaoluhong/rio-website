@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# cd to app root
+CWD=$(dirname $0)
+if [[ `basename $(pwd)` = 'scripts' ]]; then
+  cd ../
+else
+  cd `dirname $CWD`
+fi
+
+echo "Pulling Builder..." && \
+docker pull rancherlabs/website:build && \
+echo "Pulling Theme..." && \
+docker pull rancherlabs/website-theme:latest && \
+echo "Building Image..." && \
+docker build --no-cache -t rancherlabs/website:latest . && \
+echo "Pushing Image..." && \
+docker push rancherlabs/website:latest && \
+echo "OK"

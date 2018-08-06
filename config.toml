@@ -5,36 +5,10 @@ theme = "hugo_theme_pickles"
 
 [params]
   paginate = 10
-  # Social accounts. Link to these accounts are displayed in the header and
-  # footer
-  twitter = ""
-  facebook = ""
-  instagram = ""
-  googleplus = "" # https://plus.google.com/u/0/xxxxxx
-  github = ""
-  gitlab = ""
-  npm = ""
-  codepen = ""
-  dribbble = ""
-  fivehundredpx = "" # 500px
-  flickr = ""
-  pinterest = ""
-  tumblr = ""
-  vimeo = ""
-  youtube = ""
-  linkedin = ""
-  # Disqus shortname
-  disqus = ""
-  # Google Analytics API key.
-  ga_api_key = "Google Analytics tracking id"
-  author = ""
-  authorwebsite = ""
-  avatar = ""
-  contact = ""
-  bio = ""
-  
+
   # Short subtitle/tagline. This is displayed in the header.
   subtitle = ""
+
   # Logo image. This is displayed ogp image.
   logo = "images/rio-logo.svg"
   favicon = "/images/favicon.png"
@@ -62,10 +36,10 @@ sectionPagesMenu = "sidemenu"
   threshold = 80
 
   # To get stable "See also" sections we, by default, exclude newer related pages.
-  includeNewer = false
+  includeNewer = true
 
   # Will lower case keywords in both queries and in the indexes.
-  toLower = false
+  toLower = true
 
   [[related.indices]]
   name = "keywords"

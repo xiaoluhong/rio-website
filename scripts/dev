@@ -1,0 +1,95 @@
+#!/bin/bash
+set -e
+set -x
+
+PORT=9002
+IMAGE=rancherlabs/rio-website
+TAG=dev
+BUILD_BUILD=
+BUILD_DEV=
+UPLOAD=
+
+# cd to app root
+CWD=$(dirname $0)
+if [[ `basename $(pwd)` = 'scripts' ]]; then
+  cd ../
+else
+  cd `dirname $CWD`
+fi
+
+print_help()
+{
+  cat 1>&2 <<EOF
+Usage:
+
+[-b [-u]] [-d] [-p PORT] [-t]
+
+-b      - Build the build & dev images instead of pulling from the registry
+-d      - Build the dev image instead of pulling from the registry
+-p PORT - Port to listen on
+-u      - Upload the build image after building
+
+EOF
+}
+
+echoerr()
+{
+  printf "%s\n" "$*" >&2;
+}
+
+absolute() {
+# $1 : relative filename
+  echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
+}
+
+
+while getopts ":bdp:t:u" opt;do
+  case $opt in
+  b)
+    BUILD_BUILD="true"
+    BUILD_DEV="true"
+    ;;
+  d)
+    BUILD_DEV="true"
+    ;;
+  p)
+    PORT="${OPTARG}"
+    ;;
+  u)
+    UPLOAD="true"
+    ;;
+  \?)
+    echoerr "Invalid arguemnts"
+    print_help
+    exit 1
+    ;;
+  :)
+    echoerr "Option -${OPTARG} requires an argument."
+    print_help
+    exit 1
+    ;;
+  esac
+done
+
+if [ -z "$BUILD_BUILD" ]; then
+  echo "Pulling ${IMAGE}:build"
+  docker pull ${IMAGE}:build
+else
+  echo "Building ${IMAGE}:build"
+  docker build --no-cache -f Dockerfile.build -t ${IMAGE}:build .
+  if [[ "$UPLOAD" ]]; then
+    docker push ${IMAGE}:build
+  fi
+fi
+
+if [ -z "$BUILD_DEV" ]; then
+  echo "Pulling ${IMAGE}:${TAG}"
+  docker pull ${IMAGE}:${TAG}
+else
+  TAG=local
+  echo "Building ${IMAGE}:${TAG}"
+  docker build -f Dockerfile.dev -t ${IMAGE}:${TAG} .
+fi
+
+echo "Starting server on http://localhost:${PORT}"
+docker run --rm -p ${PORT}:${PORT} -it -v $(pwd):/site ${IMAGE}:${TAG} server --bind 0.0.0.0 --port ${PORT}
