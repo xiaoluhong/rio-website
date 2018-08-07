@@ -2,12 +2,11 @@ FROM rancherlabs/rio-website:build
 ENV HUGO_ENV dev
 
 VOLUME ["/site"]
-VOLUME ["/site/public"]
-VOLUME ["/site/static"]
 WORKDIR /site
+
+RUN mkdir -p /build
 
 # Expose default hugo port
 EXPOSE 80
 
-ENTRYPOINT ["hugo"]
-CMD ["server"]
+ENTRYPOINT ["hugo" ,"server", "--renderToDisk", "--destination","/build"]
