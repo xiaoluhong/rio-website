@@ -9,11 +9,9 @@ else
 fi
 
 echo "Pulling Builder..." && \
-docker pull rancherlabs/website:build && \
-echo "Pulling Theme..." && \
-docker pull rancherlabs/website-theme:latest && \
+docker pull rancherlabs/rio-website:build && \
 echo "Building Image..." && \
-docker build --no-cache -t rancherlabs/website:latest . && \
+docker build --no-cache -t rancherlabs/rio-website:latest . && \
 echo "Pushing Image..." && \
-docker push rancherlabs/website:latest && \
+docker push rancherlabs/rio-website:latest && \
 echo "OK"

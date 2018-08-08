@@ -1,0 +1,22 @@
+  </main>
+
+  <footer class="l-footer">
+    <p class="p-copyright">
+      &copy;
+      {{ if (ne (now.Format "2006") "2018") }}
+        2018 -
+      {{ end }}
+      {{ now.Format "2006" }}
+      {{ with .Site.Params.author }}
+        {{ . }}
+      {{ end }}
+    </p>
+  </footer>
+
+  <script src="/js/rellax.min.js"></script>
+  <script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
+  </script>
+</body>
+</html>

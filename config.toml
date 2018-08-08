@@ -5,6 +5,7 @@ theme = "hugo_theme_pickles"
 
 [params]
   paginate = 10
+  author = "Rancher Labs"
 
   # Short subtitle/tagline. This is displayed in the header.
   subtitle = ""
@@ -24,8 +25,8 @@ theme = "hugo_theme_pickles"
     weight = 2
 
 [[menu.main]]
-    name = "About"
-    url = "/about"
+    name = "Roadmap"
+    url = "/roadmap"
     weight = 3
 
 

@@ -3,12 +3,13 @@ ENV HUGO_ENV production
 
 WORKDIR /build
 
-COPY config.toml /build/
 COPY archetypes archetypes
+COPY config.toml /build/
+COPY content content
 COPY data data
 COPY layouts layouts
 COPY scripts scripts
-COPY content content
+COPY static static
 COPY themes themes
 
 RUN hugo

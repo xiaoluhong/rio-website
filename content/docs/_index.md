@@ -1,62 +1,70 @@
 ---
-title: "Docs"
-description: "Rio: documentation"
+title: "Installation"
 weight: 1
 ---
 
-# Causa umbrosaque enim praepositam variari et gratia
+## Quick Start
 
-## Nec Cyanee per Aurorae ignes villisque sidera
+Download: Click one of the links above
 
-Lorem markdownum sortemque neve, dum venerat armis per dederit radiis. Limbus
-cum pater Erinys alipedis hunc, dari, ore sanctae pater pariter et invidiosior?
-Ipse plangente nefas antemnas si toro, aut liceret fuga **varios**, infundere
-nefasque succedit femineae; pennis. Inter venit oblitus decebat merere excepit
-exstinctos nocte, aevo longus vultus, et in.
+Prerequisites: If you want to run on your laptop, then Minikube or Docker for Mac/Windows is recommended.  If you
+don't have those then you need to run a Linux VM (or Linux itself, come to the darkside).  We will make this easier in the future.
+Otherwise you can run this easily with any modern Linux server, nothing is needed to be installed except the kernel.
 
-> Bustum terrae, sanguine ex premens caput, ab maternae clara adspice venerisque
-> levi, lumina aetas memini morer. Secutus Cynthus et nati populisque fortunata
-> [pascua](http://utve.io/sit-nova) data illius teque prope nymphae postquam,
-> animum. Relevare at quoque postquam Rutulum videri tibi nostras deseruere nec
-> myrtea, illum? Quique que [venti adire punior](http://erant.org/) liquidarum
-> aderas temporis est herbas Laconide *et domus Ulixes*, perque. Totiens
-> nomenque, quoque huic una, in indicium [galeaque profanis](http://atque.net/)
-> fauces.
+Run: `rio ps` and it will tell you what to do
 
-Fuit vel instare caedis? Omni velo motu pudet maiorque gratamque pelle utilis
-quidem; me! Fuit hac limitibus geminaverat pectora navalibus digna manere,
-secura [torrentis](http://his-finem.net/autduratos.html) deique. Calathis in
-radiantibus decidit paruerit silva, [feras](http://aut.com/crocon).
+## Installation Types
 
-## Poenaeque descenderat saevit frons
+Rio will run in two different modes:
 
-Sibi nunc suoque, Hippotadae lupis sed; quo in pars nostra Icelon; puer.
-**Tempus** simulacraque positus, sim non sed Mnemosynen quanta, Ilus. Umbra
-tertia, adeunt si potentis spumigeroque animo acies precibus, [queri iam
-sua](http://pasceremedius.io/os), nititur Iphigenia arbore.
+**Rio Standalone**: In this mode Rio comes will all the container tech you need built in. All you need are modern Linux
+servers.  Rio does not need Docker, Kubernetes or anything else installed on the host.  This mode is good if you want
+to run containers but don't want to be a Kubernetes expert.  Rio will ensure that you have the most secure setup and
+keep all the components up to date.  This is by far the easiest way to run clusters.
 
-1. Tribuere nutritaque ducunt fatus tutoque laborum Achilles
-2. Sumptis multos meis iacebas
-3. Facta in carbasa silvani
+**Run on Kubernetes**: In this mode Rio will use an existing Kubernetes cluster.  The advantages of this approach is
+that you get more flexibility in terms of networking, storage, and other components at the cost of greatly increased
+complexity.  For the time being this mode is also good for your laptop as Minikube and Docker For Mac/Windows both
+provide a simple way to run Kubernetes on your laptop.  In the future Rio will have a mode that is simpler and does not
+require Docker For Mac/Windows or Minikube.
 
-Maturus illius possit sustinet poteris colla, puer, suum ceram, se *non*. *Medea
-et rupit* nova est pluvialis liber, Palati illa quodcumque inani filia, aquae.
-Ne [multi raptamque](http://quamingratumque.com/aves-sed) Persea pectore eadem
-nec moverat spicula dat erat quibus respondere muneris sua.
+### Standalone
 
-## Loquatur novissima Laiades
+Standalone requires Linux 4.x+ that support overlay, squashfs, and containers in general.
+This will be most current distributions.
 
-Omnem inseris [urbem exitus Phoenix](http://www.centum.com/quam) unum!
-*Vitalesque hamis commentaque* gramineo iugulum hortatus nulla iuga est dolendi
-quo et has, satis et. Languore nec, laboro cum hederae *pondus*!
+Rio forms a cluster.  To create the cluster you need one or more servers and one or more agents.  Right now HA is in the works still
+so only one server is supported.  To start a server run
 
-> Quae quod. Lues limine *arbiter* demum hostem conplexaque vires [addiderim est
-> cura](http://poscor.com/tauridominae.php) sororibus. Inquit Saeculaque
-> Calydona prementem [expulsi](http://quandoquidemnata.io/memor.html) versus
-> harundine fera senserat tecta at at arva mihi fidensque datas *germanam haec
-> Calydonius* lyra? Damnarat imo saepe Cadme Tantale
-> [et](http://totaspatio.io/alumni.html) quae sub gracili rumor ut guttur bello.
+    sudo rio server
 
-Uti contudit: est in, putaret artus sed minoribus quos, ab primis, passu.
-Adulantum et mergor quae saxa Bacchi Numicius ordine versus solum; rursus Dixit,
-erat senecta, detruncatque?
+That will start the server and register the current host as a node in the cluster.  At this point you have a full single node
+cluster.  If you don't wish to use the current server as a node then run
+
+    rio server --disable-agent
+
+This mode does have the benefit of not requiring root privileges.  On startup the server will print something similar as below
+
+    ```
+    INFO[0005] To use CLI: rio login -s https://10.20.0.3:7443 -t R108527fc31eb165d69e4ebb048168769d97734707dc22bd197b5ae2fcab27d9e64::admin:fb5ef140c22562de2789168ac6973bda 
+    INFO[0005] To join node to cluster: rio agent -s https://10.20.0.3:7443 -t R108527fc31eb165d69e4ebb048168769d97734707dc22bd197b5ae2fcab27d9e64::node:9cb35d8ae4a4621abdacfa6d8d1ea1b6 
+
+    ```
+
+Use those two command to either access the server from the CLI or add another node to the cluster.  If you are root
+on the host that is running the Rio server, `rio login` is not required.
+
+The state of the server will be in `/var/lib/rancher/rio/server` or `${HOME}/.rancher/rio/server` if running as non-root.
+For more robust HA setups that state can be moved to MySQL or etcd (this is still in the works).  The state of the agent
+will be in `/var/lib/rancher/rio/agent`.
+
+### On Kubernetes
+
+If you wish to run on an existing Kubernetes cluster all that is requires is that you have a working `kubectl` setup.  Then
+just run
+
+    rio login
+
+Follow the onscreen prompts and Rio will try to install itself into the current `kubectl` cluster.  Please note `cluster-admin`
+privileges are required for Rio.  This will probably changes, but for now we need the world.
+
