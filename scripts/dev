@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-#set -x
+set -x
 
 PORT=9002
-IMAGE=rancherlabs/rio-website
+IMAGE=rancher/rio-website
 TAG=dev
 BUILD_BUILD=
 BUILD_DEV=

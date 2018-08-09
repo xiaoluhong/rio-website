@@ -1,4 +1,4 @@
-FROM rancherlabs/rio-website:build
+FROM rancher/rio-website:build
 ENV HUGO_ENV dev
 
 VOLUME ["/site"]

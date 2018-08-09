@@ -1,4 +1,4 @@
-FROM rancherlabs/rio-website:build as build
+FROM rancher/rio-website:build as build
 ENV HUGO_ENV staging
 
 WORKDIR /build
