@@ -1,58 +1,41 @@
-baseURL = "/"
+baseURL = ""
 languageCode = "en-us"
-title = "Rio"
-theme = "hugo_theme_pickles"
+title = "Submariner"
+theme = "xmin"
+pluralizeListTitles = false
+enableRobotsTXT = true
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+enableGitInfo = true
 
-[params]
-  paginate = 10
-  author = "Rancher Labs"
+[blackfriday]
+fractions = false
+#hrefTargetBlank = true
 
-  # Short subtitle/tagline. This is displayed in the header.
-  subtitle = ""
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlaintext = true
+mediaType = "application/json"
+notAlternative = true
 
-  # Logo image. This is displayed ogp image.
-  logo = "images/rio-logo.svg"
-  favicon = "/images/favicon.png"
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"]
 
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
 
-    [[menu.main]]
-    name = "Documentation"
+
+[privacy]
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "docs"
+    name = "Docs"
     url = "/docs"
-    weight = 2
-
-[[menu.main]]
-    name = "Roadmap"
-    url = "/roadmap"
-    weight = 3
-
-
-sectionPagesMenu = "sidemenu"
-
-[related]
-  # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
-  threshold = 80
-
-  # To get stable "See also" sections we, by default, exclude newer related pages.
-  includeNewer = true
-
-  # Will lower case keywords in both queries and in the indexes.
-  toLower = true
-
-  [[related.indices]]
-  name = "keywords"
-  weight = 150
-  [[related.indices]]
-  name  = "author"
-  toLower = true
-  weight = 30
-  [[related.indices]]
-  name  = "tags"
-  weight = 100
-  [[related.indices]]
-  name  = "date"
-  weight = 10
-  pattern = "2017"
+    weight = -110

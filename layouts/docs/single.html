@@ -1,21 +1,23 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL | sanitizeurl }}
-<div class="row between-md">
-  <aside class="col-md-3 sidebar-left">
-    <nav class="sidebar-nav">
-    {{ $currentPage := . }}
-      {{ range where .Site.Pages "Section" "docs"}}
-        <a class="sidebar-nav-item" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-      {{end}}
-    </nav>
+
+<div class="container">
+  <nav class="tree-nav">
+    {{ partial "tree.html" . }}
+  </nav>
+
+  <div class="article-meta">
+    <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+    {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
+    {{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+  </div>
+
+  <main>
+    {{ .Content }}
+  </main>
+
+  <aside>
+    {{.TableOfContents}}
   </aside>
-  <article class="col-md-8 p-article">
-    {{ with .Params.thumbnail }}
-      <img src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">
-    {{ end }}
-    <section id="js-article" class="">
-      {{ .Content }}
-    </section>
-  </article>
 </div>
+
 {{ partial "footer.html" . }}

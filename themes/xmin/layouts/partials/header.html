@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ $cache :=  now.Unix }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}?{{ $cache }}">
+
+
+
+    {{ $main := resources.Get "js/main.js" }}
+    {{ $appJs := slice $main | resources.Concat "js/app.js" }}
+    <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink }}?{{ $cache }}"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400" rel="stylesheet">
+
+    <!--fav-->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+
+  <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56382716-6', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+  <!-- End Google Analytics -->
+
+
+  <!--seo and sharing-->
+  <meta property="og:title" content="k3s: Lightweight Kubernetes">
+  <meta property="og:description" content="Easy to install. A binary of less than 40 MB. Uses only 512 MB of RAM.">
+  <meta property="og:image" content="/thumbnail.jpg">
+  <meta property="og:image" content="{{ if .Params.image }}{{ . }}{{ else }}{{.Site.BaseURL}}/img/logo-square.png{{ end }}" />
+  <meta property="og:url" content="{{.Site.BaseURL}}" />
+
+  {{ $empty := resources.Get "js/empty.js" }}
+  {{ $jquery := resources.Get "js/jquery.js" }}
+  {{ $buttons := resources.Get "js/buttons.js" }}
+  {{ $vendorJs := slice $jquery $empty $buttons | resources.Concat "js/vendor.js" }}
+  <script charset="utf-8" type="text/javascript" src="{{ $vendorJs.Permalink }}?{{ $cache }}"></script>
+
+
+  </head>
+
+  {{- $.Scratch.Set "topLevel" . -}}
+  {{ range $page := $.Site.Sections }}
+    {{- if $.CurrentSection -}}
+      {{- if $page.IsAncestor $.CurrentSection -}}
+        {{- $.Scratch.Set "topLevel" . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  <body class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }}">
+    <header>
+      <div class="bg-dark">
+        <div class="flex-between wrap">
+          <a href="https://rancher.com/" target="blank"><img src="/img/rancher-labs-logo.svg" style="height: 20px; width: 184px;"></a>
+          <p class="hidden-small">See what else <a href="https://rancher.com/" target="blank">Rancher</a> is up to</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <div class="flex-between wrap">
+          <a href="/" class="logo"><img src="/img/logo.svg?1"></a>
+          <ul class="menu">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL | relURL }}" class="btn no-bg">{{ .Name }}</a></li>
+            {{ end }}
+            <li><a href="https://github.com/rancher/k3s" class="btn"><img src="/img/icon-github.svg"><span>Github</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
