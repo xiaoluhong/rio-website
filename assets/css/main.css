@@ -138,9 +138,8 @@ nav.main-nav {
     display: block; }
   nav.main-nav .menu {
     text-align: center; }
-    nav.main-nav .menu a {
-      text-decoration: none;
-      color: #00FFFF; }
+    nav.main-nav .menu a.btn.no-bg {
+      color: #F3F3F3; }
 
 .article-meta, footer {
   text-align: center; }
