@@ -78,9 +78,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
   font-family: Poppins, Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
   text-transform: uppercase;
+  
 
-
-
+		
 }
 
 p {
@@ -598,7 +598,7 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-
+  
 }
 
 .no-gutters {
@@ -10047,13 +10047,13 @@ a.text-dark:hover, a.text-dark:focus {
 /*Kyle Dillon's custom CSS*/
 
 .hero {
-
-	background-image: url("/images/hero.png");
+	
+	background-image: url("../content/images/AdobeStock_243038966.png");
 	background-size: cover;
 	background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
+	
 }
 
 .hero-text {
@@ -10067,7 +10067,7 @@ a.text-dark:hover, a.text-dark:focus {
 	color: white;
 	text-transform: none;
 	text-shadow: 2px 2px 5px rgba(0,0,0,0.45);
-
+	
 }
 
 .download-now {
@@ -10080,7 +10080,7 @@ a.text-dark:hover, a.text-dark:focus {
 	border: none;
 	background-color: linear-gradient(to right, #00ABF5, #49C1F5);; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, #00ABF5, #49C1F5); /* Standard syntax (must be last) */
-
+	
 }
 
 .download-now a {
@@ -10113,8 +10113,8 @@ a.text-dark:hover, a.text-dark:focus {
 	color: #49c1f5;
 }
 
-.white-overlay {
-	background-image: url("/images/white-overlay.png");
+.white-overlay { 
+	background-image: url("../content/images/white-overlay.png");
 }
 
 .title-text {
@@ -10160,7 +10160,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .What-Can-Rio-Do-For-You {
-	background-image: url("/images/mountain.png");
+	background-image: url("../content/images/mountain.png");
 	background-position: top;
 }
 
@@ -10178,9 +10178,31 @@ a.text-dark:hover, a.text-dark:focus {
 .steps{
 	padding-top: 200px;
 	padding-bottom: 100px;
+	
+}
+
+.laptop-bg {
+	background-image: url("../content/images/laptop.png");
+	    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .circle-step {
+	background-color: none;
+	width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 30px;
+	margin: 0 auto;
+	color: #00abf5;
+	border: 3px solid #00ABF5;
+}
+
+.circle-step:hover {
 	background-color: #00ABF5;
 	width: 200px;
     height: 200px;
@@ -10191,6 +10213,8 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 30px;
 	margin: 0 auto;
 	color: white;
+	    box-shadow: 0 0 0 4px #fff;
+    -webkit-transition: color 0.3s;
 }
 
 .step-text {
@@ -10198,6 +10222,10 @@ a.text-dark:hover, a.text-dark:focus {
     margin-top: 18px;
     font-size: 36px;
     font-weight: 100;
+    -webkit-transition: color 0.3s;
+	border: none;
+	font-weight: 700;
+	text-transform: uppercase;
 
 }
 
@@ -10212,11 +10240,11 @@ hr.rails  {
 .ticket {
 	background: #3d3d3d;
 	color: #fff;
-    margin-top: -400px;
+    margin-top: -55px;
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 3px;
+    border-radius: 20px;
 	-webkit-box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 -moz-box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
@@ -10232,7 +10260,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 	font-weight: 100;
 	padding-top: 25px;
 	color: #00ABF5;
-
+	
 }
 
 .install-now {
@@ -10243,7 +10271,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 	padding: 15px 25px;
 	border-radius: 3px;
 	border: 3px solid #00abf5;
-
+	
 }
 
 .install-now a {
@@ -10253,7 +10281,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 
 .install-now a:hover {
 	color: white;
-
+	
 }
 
 .install-now:hover {
@@ -10283,7 +10311,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 	border-radius: 3px;
 	border: 3px solid #fff;
 	background: none;
-
+	
 }
 
 .install-now-white a {
@@ -10293,7 +10321,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 
 .install-now-white a:hover {
 	color: #00abf5;
-
+	
 }
 
 .install-now-white:hover {
@@ -10308,7 +10336,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 }
 
 .cable-car {
-	background-image: url("/images/cable-car-bg.png");
+	background-image: url("../content/images/cable-car-bg.png");
 	background-size: contain;
     background-repeat: no-repeat;
     background-attachment: inherit;
@@ -10321,3 +10349,14 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 	.ticket {
 	  display: none;
 	}
+}
+
+.mountain {
+	background-image: url("..//content/images/mountains.png");
+	background-size: contain;
+	background-color: #00ABF5;
+	background-repeat: repeat-x;
+}
+
+	
+	
