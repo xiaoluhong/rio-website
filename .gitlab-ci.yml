@@ -1,0 +1,48 @@
+variables:
+  IMAGE: $CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_REF_NAME
+  CACHE_IMAGE: $CI_REGISTRY/$CI_PROJECT_PATH:latest
+  DEV_IMAGE: $CI_REGISTRY/$CI_PROJECT_PATH:develop
+  DOCKER_DRIVER: overlay2
+  DOCKER_HOST: tcp://docker:2375/
+
+services:
+  - docker:dind
+
+stages:
+  - build_container
+  - release
+  - deploy
+
+image: docker:stable 
+
+before_script:
+  - docker info
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+
+build:branch:
+  stage: build_container
+  script:
+  - docker pull $CACHE_IMAGE || true
+  - docker build --cache-from $CACHE_IMAGE --pull -t $IMAGE .
+  - docker push $IMAGE
+  except:
+  - master
+
+build:latest:
+  stage: release
+  script:
+  - docker pull $CACHE_IMAGE || true
+  - docker build --cache-from $CACHE_IMAGE --pull -t $CACHE_IMAGE .
+  - docker push $CACHE_IMAGE
+  only:
+  - master
+
+build:tags:
+  stage: release
+  script:
+  - docker pull $CACHE_IMAGE || true
+  - docker build --cache-from $CACHE_IMAGE --pull -t $IMAGE .
+  - docker push $IMAGE
+  only:
+  - tags
+
