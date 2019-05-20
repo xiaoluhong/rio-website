@@ -11,6 +11,7 @@
     background-attachment: fixed;
 	background-position-x: right;
     background-position-y: bottom;
+	width: 100%;
 
 }
 
@@ -263,7 +264,7 @@ hr.rails  {
 
 @media (max-width: 576px) {
 	.hero-text {
-		font-size: 62px;
+		font-size: 48px;
 }
 
 }
