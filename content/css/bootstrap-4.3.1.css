@@ -10186,6 +10186,7 @@ a.text-dark:hover, a.text-dark:focus {
 	    background-size: contain;
     background-attachment: fixed;
     background-repeat: no-repeat;
+	background-position: right;;
 }
 
 .circle-step {
