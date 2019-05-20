@@ -160,20 +160,7 @@
 	border: 3px solid #00ABF5;
 }
 
-.circle-step:hover {
-	background-color: #00ABF5;
-	width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 100px;
-    vertical-align: middle;
-    padding: 30px;
-	margin: 0 auto;
-	color: white;
-	    box-shadow: 0 0 0 4px #fff;
-    -webkit-transition: color 0.3s;
-}
+
 
 .step-text {
 	vertical-align: middle;
