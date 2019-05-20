@@ -202,39 +202,6 @@ hr.rails  {
 
 }
 
-.install-now {
-	color: #fff;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-weight: 700;
-	padding: 15px 25px;
-	border-radius: 3px;
-	border: 3px solid #00abf5;
-
-}
-
-.install-now a {
-	color: #00abf5;
-	text-decoration: none;
-}
-
-.install-now a:hover {
-	color: white;
-
-}
-
-.install-now:hover {
-	color: #fff;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-weight: 700;
-	padding: 15px 25px;
-	border-radius: 3px;
-	border: 3px solid #00abf5;
-	background-color: linear-gradient(to right, #49C1F5, #00ABF5);; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #49C1F5, #00ABF5); /* Standard syntax (must be last) */
-}
-
 .callout {
 	color: white;
 	background-color: linear-gradient(to right, #49C1F5, #00ABF5);; /* For browsers that do not support gradients */
@@ -293,6 +260,14 @@ hr.rails  {
 	font-family: monospace !important;
 }
 
+#ticket-lead {
+	font-size: 26px;
+	margin-bottom: 32px;
+}
+
+#get-started-cta-button {
+	margin-top: 32px;
+}
 
 .center {
 	margin: 0 auto;
@@ -305,5 +280,5 @@ hr.rails  {
 	.hero-text {
 		font-size: 62px;
 }
-	
+
 }
