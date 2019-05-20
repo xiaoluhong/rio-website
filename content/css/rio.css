@@ -4,13 +4,13 @@
 /*Kyle Dillon's custom CSS*/
 
 .hero {
-	
+
 	background-image: url("/images/hero.png");
 	background-size: cover;
 	background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-	
+
 }
 
 .hero-text {
@@ -24,7 +24,7 @@
 	color: white;
 	text-transform: none;
 	text-shadow: 2px 2px 5px rgba(0,0,0,0.45);
-	
+
 }
 
 .download-now {
@@ -37,7 +37,7 @@
 	border: none;
 	background-color: linear-gradient(to right, #00ABF5, #49C1F5);; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, #00ABF5, #49C1F5); /* Standard syntax (must be last) */
-	
+
 }
 
 .download-now a {
@@ -70,7 +70,7 @@
 	color: #49c1f5;
 }
 
-.white-overlay { 
+.white-overlay {
 	background-image: url("/images/white-overlay.png");
 }
 
@@ -135,7 +135,7 @@
 .steps{
 	padding-top: 200px;
 	padding-bottom: 100px;
-	
+
 }
 
 .laptop-bg {
@@ -218,7 +218,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 	font-weight: 100;
 	padding-top: 25px;
 	color: #00ABF5;
-	
+
 }
 
 .install-now {
@@ -229,7 +229,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 	padding: 15px 25px;
 	border-radius: 3px;
 	border: 3px solid #00abf5;
-	
+
 }
 
 .install-now a {
@@ -239,7 +239,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 
 .install-now a:hover {
 	color: white;
-	
+
 }
 
 .install-now:hover {
@@ -269,7 +269,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 	border-radius: 3px;
 	border: 3px solid #fff;
 	background: none;
-	
+
 }
 
 .install-now-white a {
@@ -279,7 +279,7 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 
 .install-now-white a:hover {
 	color: #00abf5;
-	
+
 }
 
 .install-now-white:hover {
@@ -316,6 +316,11 @@ box-shadow: 0px 0px 74px -23px rgba(0,0,0,0.65);
 	background-repeat: repeat-x;
 }
 
+.monospace {
+	font-family: monospace !important;
+}
 
-
-	
+#ticket-lead {
+	margin-bottom: 32px;
+	font-size: 24px;
+}
