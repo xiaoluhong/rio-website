@@ -7,9 +7,10 @@
 
 	background-image: url("/images/hero.png");
 	background-size: cover;
-	background-position: right;
     background-repeat: no-repeat;
     background-attachment: fixed;
+	background-position-x: right;
+    background-position-y: bottom;
 
 }
 
