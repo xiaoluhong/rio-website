@@ -3,6 +3,7 @@
 
 /*Kyle Dillon's custom CSS*/
 
+
 .hero {
 
 	background-image: url("/images/hero.png");
@@ -14,6 +15,8 @@
 	width: 100%;
 
 }
+
+
 
 .hero-text {
 	font-size: 80px;
@@ -270,5 +273,8 @@ hr.rails  {
 	.hero-text {
 		font-size: 48px;
 }
+	.hero {
+		background-attachment: scroll;
+	}
 
 }
