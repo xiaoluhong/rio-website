@@ -30,25 +30,39 @@
   </head><body class="">
     <header>
       <div class="bg-primary">
-        <div class="container" style="padding-top: 10px; padding-bottom: 10px">
-         <a href="https://rancher.com/" target="blank"><img src="/images/rancher-logo.svg" style="height: 20px; width: 184px;" alt="Rancher"></a>
+        <div class="container" style="padding-top: 5px;">
+			<div class="row">
+			<div class="col-8">
+				         <a href="https://rancher.com/" target="blank"><img src="/images/rancher-labs-logo.svg" style="height: 20px; width: 150px;" alt="Rancher"></a>
+
+				</div>
+
+			<div class="col-3 header">
+									<p>See what else <a href="http://rancher.com">Rancher</a> is up to</p>
+				</div>
+			</div>
         </div>
       </div>
 
       <nav class="main-nav">
         <div class="container" style="padding-top: 15px; padding-bottom: 15px;">
 			<div class="row">
-			<div class="col-9">
-          <a href="/" style="padding-left: 25px;" class="logo" style="height: 50px; position: relative;"><img src="/images/rio-logo.svg" height="50"></a>
+			<div class="col-8">
+          <a href="/" class="logo" style="height: 50px;"><img src="/images/rio-logo.svg" height="50"></a>
 			</div>
-				<div class="col-3">
+					<div class="col-4">
 			 <div>
       <!-- stars -->
       <a class="github-button" href="https://github.com/rancher/rio" data-icon="octicon-star" data-show-count="true" aria-label="Star rancher/rio on Github">Star</a>
 
       <!-- forks -->
       <a class="github-button" href="https://github.com/rancher/rio/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork rancher/rio on Github">Fork</a>
+
+	  <a class="github-button" href"=https://github.com/rancher/rio/blob/master/README.md">Docs</a>
     </div>
+			</div>
+
+
 			</div>
 				</div>
         </div>
@@ -71,10 +85,10 @@
 				<br>
 				<br>
               <div>
-		  <button class="download-now" style="margin-right: 20px">
+		  <button class="download-now">
 			  <a class="download-now-text" href="https://github.com/rancher/rio">Install Rio</a>
 			  </button>
-		  <button class="join-meetup" style="margin-left: 20px">
+		  <button class="join-meetup">
 			  <a href="https://info.rancher.com/introducing-rio">Join a Meetup</a>
 			  </button>
 		  </div>
@@ -91,7 +105,7 @@
 			</h2>
 			  <br>
 			<p class="lead">
-				What if you could combine the power of Istio, Knative, and Kubernetes into a command as simple to use as <span class="monospace">docker run</span>? Install Rio, and with only a few keystrokes you can deploy, manage, scale, and version stateless applications in any Kubernetes cluster.
+				What if you could combine the power of Istio, Knative, and Kubernetes into a command as simple to use as <span class="monospace">docker run</span>? Rio is a Kubernetes-based MicroPaaS, and with only a few keystrokes you can deploy, manage, scale, and version stateless applications in any Kubernetes cluster.
 			</p>
 			</div>
 			<div class="benefits padding">
@@ -113,21 +127,21 @@
 					Lightweight
 					</h3>
 					<p>
-					Installs into any Kubernetes cluster
+					Installs into any Kubernetes cluster.
 					</p>
 					<br>
 					<h3 class="lead bullet">
 					Powerful
 					</h3>
 					<p>
-					Uses Prometheus, Knative and Istio under the hood
+					Uses Prometheus, Knative and Istio under the hood.
 					</p>
 					<br>
 					<h3 class="lead bullet">
 					Smart Scaling
 					</h3>
 					<p>
-					Automatic scaling based on Layer 4 and Layer 7 metrics from Prometheus
+					Automatic scaling based on Layer 4 and Layer 7 metrics from Prometheus.
 					</p>
 					</div>
 				<div class="col-lg-4 col-md-6 col-sm-12">
@@ -147,21 +161,21 @@
 					Encrypted
 					</h3>
 					<p>
-					Your workloads receive a DNS record and a wildcard certificate from LetsEncrypt
+					Your workloads receive a DNS record and a wildcard certificate from LetsEncrypt.
 					</p>
 					<br>
 					<h3 class="lead bullet">
 					Integrated
 					</h3>
 					<p>
-					Rio integrates with Kubernetes RBAC for maximum security
+					Rio integrates with Kubernetes RBAC for maximum security.
 					</p>
 					<br>
 					<h3 class="lead bullet">
 					Safety Net Included
 					</h3>
 					<p>
-					Your applications automatically include resource constraints for the best cluster performance
+					Your applications automatically include resource constraints for the best cluster performance.
 					</p>
 				  </div>
 				<div class="col-lg-4 col-md-6 col-sm-12">
@@ -178,17 +192,17 @@
 					</h3>
 					<br>
 					<h3 class="lead bullet">
-					Build Images Without a Pipeline
+					Streamline Your Pipeline
 					</h3>
 					<p>
-					Rio can watch a remote repository, and you can tell it to automatically build and deploy new releases when you commit changes
+					Rio can watch a remote repository, and you can tell it to automatically build and deploy new releases when you commit changes.
 					</p>
 					<br>
 					<h3 class="lead bullet">
 					Always Running Smoothly
 					</h3>
 					<p>
-					When rolling out new versions of your application, Rio understands the current load and scales up for maximum performance
+					When rolling out new versions of your application, Rio understands the current load and scales up for maximum performance.
 					</p>
 				  </div>
 				</div>
@@ -323,12 +337,26 @@
 			</h2>
 			  <br>
 			<p class="lead">
-			Rio isn't just a wrapper around Istio and Knative. It's the easiest way to deploy and manage every aspect of your application.
+				Rio creates an experience on Istio and Knative, and presents an easy way to manage every aspect of your application.
 			</p>
 				<br>
 			  <div class="col-lg-9 center">
 
-				    <img src="/images/diagram.png" width="100%" alt=""/> </div>
+						<img src="/images/diagram.png" width="100%" alt=""/>
+					</div>
+
+					<h3 id="features-header">Rio Features Include:</h3>
+						<ul id="features-list">
+							<li>Automatic DNS and HTTPS</li>
+							<li>HTTP Load Balancing</li>
+							<li>HTTP Routing</li>
+							<li>HTTP Metrics</li>
+							<li>Autoscaling</li>
+							<li>Canary Deployments</li>
+							<li>Git-Triggered Deployments</li>
+						</ul>
+					</p>
+
 				</div>
 
 			</div>
@@ -346,10 +374,10 @@
 				<br>
 				<br>
               <div>
-		  <button class="download-now" style="margin-right: 20px; border: 3px solid white">
+		  <button class="download-now" style="border: 3px solid white;">
 			  <a class="download-now-text" href="https://github.com/rancher/rio">Install Rio</a>
 			  </button>
-		  <button class="join-meetup" style="margin-left: 20px">
+		  <button class="join-meetup">
 			  <a href="https://info.rancher.com/introducing-rio">Join a Meetup</a>
 			  </button>
 		  </div>

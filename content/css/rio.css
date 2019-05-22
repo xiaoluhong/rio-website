@@ -2,6 +2,14 @@
 /* CSS Document */
 
 /*Kyle Dillon's custom CSS*/
+.header p{
+	color: white;
+}
+
+.header a{
+	color: white;
+	text-decoration: underline;
+}
 
 .hero {
 
@@ -14,6 +22,8 @@
 	width: 100%;
 
 }
+
+
 
 .hero-text {
 	font-size: 80px;
@@ -39,6 +49,7 @@
 	border: none;
 	background-color: linear-gradient(to right, #00ABF5, #49C1F5);; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, #00ABF5, #49C1F5); /* Standard syntax (must be last) */
+	margin: 15px;
 
 }
 
@@ -61,6 +72,8 @@
 	padding: 15px 25px;
 	border-radius: 3px;
 	border: none;
+	background-color: #fff;
+	margin: 15px;
 }
 
 .join-meetup a {
@@ -131,7 +144,7 @@
 }
 
 .logo-white {
-	filter: brightness(100);
+	filter: brightness(500);
 }
 
 .steps{
@@ -219,6 +232,7 @@ hr.rails  {
 	border-radius: 3px;
 	border: 3px solid #fff;
 	background: none;
+	margin: 15px;
 
 }
 
@@ -259,6 +273,15 @@ hr.rails  {
 	margin: 0 auto;
 }
 
+#features-list {
+	font-size: 1.5rem;
+}
+
+#features-header {
+	margin-top: 32px;
+	margin-bottom: 16px;
+}
+
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 
@@ -266,5 +289,11 @@ hr.rails  {
 	.hero-text {
 		font-size: 48px;
 }
+	.hero {
+		background-attachment: scroll;
+	}
+	.header {
+		display: none;
+	}
 
 }
