@@ -39,6 +39,7 @@
 	border: none;
 	background-color: linear-gradient(to right, #00ABF5, #49C1F5);; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, #00ABF5, #49C1F5); /* Standard syntax (must be last) */
+	margin: 15px;
 
 }
 
@@ -61,6 +62,8 @@
 	padding: 15px 25px;
 	border-radius: 3px;
 	border: none;
+	background-color: #fff;
+	margin: 15px;
 }
 
 .join-meetup a {
@@ -131,7 +134,7 @@
 }
 
 .logo-white {
-	filter: brightness(100);
+	filter: brightness(500);
 }
 
 .steps{
@@ -219,6 +222,7 @@ hr.rails  {
 	border-radius: 3px;
 	border: 3px solid #fff;
 	background: none;
+	margin: 15px;
 
 }
 
