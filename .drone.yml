@@ -1,0 +1,52 @@
+---
+kind: pipeline
+name: pull-request
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: test
+  pull: default
+  image: plugins/docker
+  settings:
+    context: .
+    dockerfile: Dockerfile
+    dry_run: true
+    repo: rancherlabs/rio-website
+    password:
+      from_secret: docker_password
+    username:
+      from_secret: docker_username
+  when:
+    event:
+    - pull_request
+
+---
+kind: pipeline
+name: production
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: publish-latest
+  pull: default
+  image: plugins/docker
+  settings:
+    context: .
+    dockerfile: Dockerfile
+    group: publish
+    repo: rancherlabs/rio-website
+    tag: latest
+    password:
+      from_secret: docker_password
+    username:
+      from_secret: docker_username
+  when:
+    branch:
+    - master
+    event:
+    - push
