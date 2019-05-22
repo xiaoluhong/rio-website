@@ -2,7 +2,13 @@
 /* CSS Document */
 
 /*Kyle Dillon's custom CSS*/
+.header p{
+	color: white;
+}
 
+.header a{
+	color: white;
+}
 
 .hero {
 
@@ -275,6 +281,9 @@ hr.rails  {
 }
 	.hero {
 		background-attachment: scroll;
+	}
+	.header {
+		display: none;
 	}
 
 }
