@@ -20,9 +20,9 @@
     ga('send', 'pageview');
   </script>
   <!-- Bootstrap -->
-  <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+  <link href="/css/bootstrap-4.3.1.css" rel="stylesheet">
   <!-- Rio CSS -->
-  <link href="css/rio.css?t=1561653069" rel="stylesheet">
+  <link href="/css/rio.css?t=1561662133" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -37,8 +37,7 @@
 
   <meta property="og:title" content="Rio">
   <meta property="og:description" content="The MicroPaaS for Kubernetes">
-  <!-- <meta property="og:image" content="/images/thumbnail.jpg"> -->
-  <meta property="og:image" content="#" />
+  <meta property="og:image" content="https://rio.io/images/rio-logo.png">
   <meta property="og:url" content="https://rio.io" />
 </head>
 
@@ -111,7 +110,7 @@
       </div>
     </div>
   </section>
-  <section class="cable-car">
+  <section class="overview">
     <div class="container padding" style="padding-top: 100px;">
       <div class="col-lg-9">
         <h2 class="title-text">
@@ -125,6 +124,50 @@
           your laptop.
         </p>
       </div>
+    </div>
+  </section>
+  <section style="background-color: #f9f9f9">
+    <div class="container padding">
+      <div class="row">
+        <div class="col-lg-12 padding">
+          <h2 class="title-text">
+            How Is It Built?
+          </h2>
+          <br>
+          <p class="lead">
+            Rio creates an experience on Istio and Knative and presents an easy way to manage every aspect of your application.
+          </p>
+          <br>
+          <div class="col-lg-9 center">
+            <img src="/images/diagram.png" width="100%" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+            <h3 id="features-header">Rio  Includes</h3>
+        </div>
+        <div class="col-lg-6">
+          <ul class="features-list">
+            <li>Automatic DNS and HTTPS</li>
+            <li>HTTP Load Balancing</li>
+            <li>HTTP Routing</li>
+            <li>HTTP Metrics</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <ul class="features-list">
+            <li>Autoscaling</li>
+            <li>Canary Deployments</li>
+            <li>Git-Triggered Deployments</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cable-car">
+    <div class="container padding">
       <div class="benefits padding">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-12">
@@ -190,7 +233,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h2 class="title-text">
-            Here's How it Works
+            How Does It Work?
           </h2>
           <br>
           <p class="lead">
@@ -229,14 +272,14 @@
     <div class="container padding" style="padding-top: 100px;">
       <div class="row">
         <div class="col-lg-4 logo-white padding">
-          <img src="/images/rancher-labs-stacked-black.svg" alt="Rancher Labs" />
+          <img src="/images/rancher-labs-stacked-white.svg" alt="Rancher Labs" />
         </div>
         <div class="col-lg-8 padding">
           <p class="lead" style="font-size: 22px">
             At Rancher Labs, all of our products are focused on making Kubernetes simple to use for everybody.
             <br>
             <br>
-            We saw how people were frustrated by the effort required to manage tools like Istio and Knative., so we built Rio. Now developers can deploy, manage, scale, and version their applications with a few simple commands.
+            We saw how people were frustrated by the effort required to manage tools like Istio and Knative, so we built Rio. Now developers can deploy, manage, scale, and version their applications with a few simple commands.
             <br>
           </p>
           <br>
@@ -292,48 +335,12 @@
           <div class="col-lg-12 col-md-6 col-sm-12">
             <h2 class="easy-step-text">That’s it! With just a few commands, you'll be up and running with Istio and a simple set of instructions that deliver powerful results for app deployment.</h2>
 
-            <button class="download-now" id="get-started-cta-button">
+            <!-- <button class="download-now" id="get-started-cta-button">
               <a class="download-now-text" href="https://github.com/rancher/rio#quick-start">Install Rio</a>
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section style="background-color: #f9f9f9">
-    <div class="container padding">
-      <div class="row">
-        <div class="col-lg-12 padding">
-          <h2 class="title-text">
-            Here's how Rio is Built
-          </h2>
-          <br>
-          <p class="lead">
-            Rio creates an experience on Istio and Knative and presents an easy way to manage every aspect of your application.
-          </p>
-          <br>
-          <div class="col-lg-9 center">
-
-            <img src="/images/diagram.png" width="100%" alt="" />
-          </div>
-
-          <h3 id="features-header">Rio Features Include:</h3>
-          <ul id="features-list">
-            <li>Automatic DNS and HTTPS</li>
-            <li>HTTP Load Balancing</li>
-            <li>HTTP Routing</li>
-            <li>HTTP Metrics</li>
-            <li>Autoscaling</li>
-            <li>Canary Deployments</li>
-            <li>Git-Triggered Deployments</li>
-          </ul>
-          </p>
-
-        </div>
-
-      </div>
-
     </div>
   </section>
 
