@@ -237,7 +237,6 @@ hr.rails  {
     border: 3px solid #fff;
     background: none;
     margin: 15px;
-
 }
 
 .install-now-white a {
@@ -279,7 +278,7 @@ hr.rails  {
     text-align: center;
 }
 
-#features-list {
+.features-list {
     font-size: 1.5rem;
 }
 
