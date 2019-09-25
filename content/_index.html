@@ -3,130 +3,89 @@ title: "Rio"
 description: "Fun, simple, powerful. Containers at their best."
 ---
 
-<section>
-
-  <div class="wrap text-center">
-    <h1>Intro header goes here</h1>
-    <p>Rio is a user oriented end-to-end container solution with a focus on keeping containers simple and combating the current trend of complexity. It's kept fun and simple through its familiar and opinionted user experience. Additionally, Rio is a "Cloud Native Container Distribution", meaning is includes built-in Cloud Native technologies such as Kubernetes, Istio, Containerd, etc. so that the user does not need to be an expert in installing, using, and maintaining these system.</p>
-
-    <div class="download">
-      <a href="https://github.com/rancher/rio/releases/download/v0.0.2/rio-v0.0.2-linux-amd64.tar.gz"><img src="/img/icon-linux.svg">linux</a>
-      <a href="https://github.com/rancher/rio/releases/download/v0.0.2/rio-v0.0.2-darwin.tar.gz"><img src="/img/icon-mac.svg">mac</a>
-      <a href="https://github.com/rancher/rio/releases/download/v0.0.2/rio-v0.0.2-windows.zip"><img src="/img/icon-windows.svg">windows</a>
-    </div>
-  </div>
-
-
-
-  <img src="/img/wave.svg" class="rellax" data-rellax-speed="-4" />
-
-
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="grid-two">
-      <div>
-        <h2>Great For</h2>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      </div>
-      <div>
-        <ul class="styled">
-         <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-         <li>Aliquam tincidunt mauris eu risus.</li>
-         <li>Vestibulum auctor dapibus neque.</li>
-         <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-         <li>Aliquam tincidunt mauris eu risus.</li>
-        </ul>
+<div class="bg-primary">
+      <div class="wrap grid-two">
+        <div>
+          <h1>The MicroPaaS for Kubernetes</h1>
+          <h4>Build, test, deploy, scale, and version stateless apps in any Kubernetes cluster.</h4>
+          <a href="https://info.rancher.com/introducing-rio" class="btn" target="_blank" rel="noopener">Learn More</a>
+        </div>
+  
+        <!-- <div class="video-responsive">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div> -->
       </div>
     </div>
+  
+    <div class="folder">
+      <h4>Great For</h4>
+      <div class="bg-light grid-three text-center">
+        <h5>Automatic DNS and HTTPS</h5>
+        <h5>HTTP Load Balancing, routing, and metrics</h5>
+        <h5>Autoscaling</h5>
+        <h5>Canary Deployments</h5>
+        <h5>Git-Triggered Deployments</h5>
+      </div>
+    </div>
+  </section>
+
+<section class="wrap">
+  <h2>Why Use Rio<h2>
+  <div class="grid-three">
+    <div>
+      <h5>Create Apps, Not the Platform</h5>
+      <p>Rio installs into any Kubernetes cluster and handles all the wiring for common services like Istio for service mesh, Knative for creating event functions, and Prometheus for monitoring.</p>
+      <p>With a few simple commands, Rio can implement Git-based continuous delivery; help optimize routing for your apps; give you canary, A/B, and blue/green deployments; monitor HTTP traffic inside your service mesh; deliver smart autoscaling; and more.</p>
+    </div>
+      
+    <div>
+      <h5>Streamline Your Release Pipeline</h5>
+      <p>Rio helps you deliver the best possible application release experience to your users.</p>
+      <ul>
+        <li>Tell Rio to automatically build and deploy new app releases when you commit changes to your repository.</li>
+        <li>When rolling out new versions of your app, Rio understands the current load and scales up for maximum performance using Layer 4 and Layer 7 metrics from Prometheus.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Maximum Security by Default</h5>
+      <p>When using Rio, your apps launch with the most secure network configuration possible.</p>
+      <li>Your workloads receive a DNS record and a wildcard certificate from LetsEncrypt.</li>
+      <li>Rio also integrates with Kubernetes RBAC for maximum security.</li>
+      <li>Your apps will automatically include resource constraints for optimal cluster performance.</li>
+    </div>
+    
   </div>
 </section>
+<hr/>
+<section class="wrap">
+  <h2>How it Works</h2>
+  <!-- <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> -->
+  <img src="../images/how-it-works-rio.svg" alt="{{ .Site.Title }}">
+</section>
 
-<section>
-  <div class="wrap">
-    <h2>Features</h2>
+<section class="get-started">
+  <div class="white text-center">
+    <h2>Get Started</h2>
     <div class="grid-three">
-      <div class="card">
-<!--         <img src="/img/icon-placeholder.svg" width="100" />
- -->        <h4>Simple</h4>
-        <h6>Opinionated</h6>
-        <p>Simplicity can only be achieved with a focused point of view.</p>
-      </div>
-
-      <div class="card">
-<!--         <img src="/img/icon-placeholder.svg" width="100" />
- -->        <h4>Fun</h4>
-        <h6>Bringing the fun back</h6>
-        <p>Containers should be fun.</p>
-      </div>
-
-      <div class="card">
-<!--         <img src="/img/icon-placeholder.svg" width="100" />
- -->        <h4>Portable</h4>
-        <h6>Run Anywhere</h6>
-        <p>Each Rio cluster has the same functionality available to it. The differences between providers are only speed, reliability, and permission controls. Running in production is as simple as your laptop.</p>
-      </div>
-
-      <div class="card">
-<!--         <img src="/img/icon-placeholder.svg" width="100" />
- -->        <h4>Secure</h4>
-        <h6>By default</h6>
-        <p>Rio defaults to the best security settings and encryption available.</p>
-      </div>
-
-      <div class="card">
-<!--         <img src="/img/icon-placeholder.svg" width="100" />
- -->        <h4>Production-Grade</h4>
-        <h6>Scales to 11</h6>
-        <p>Running Rio should give you a production-worthy system and not need more bolt-on ops tools.</p>
-      </div>
-
-      <div class="card">
-<!--         <img src="/img/icon-placeholder.svg" width="100" />
- -->        <h4>Cloud Native</h4>
-        <h6>Buzzword compatible</h6>
-        <p>Rio will include all the the key cloud native technologies by default so you don't need to be an expert in the details.</p>
-      </div>
+      <h4>Deploy Rio into a kubernetes cluster</h4>
+      <h4>Define a service</h4>
+      <h4>Scale and promote a new version</h4>
     </div>
+    <p>That’s it! With just a few commands, you'll be up and running with Istio and a simple set of instructions that deliver powerful results for app deployment.</p>
   </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>How it works</h2>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="text-center">
-      <h2>Quick Start</h2>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <a href="https://github.com/rancher/k3s" class="btn">Button</a>
-    </div>
-
-    <pre><code>
-    #header h1 a {
-      display: block;
-      width: 300px;
-      height: 80px;
-    }
-    </code></pre>
-    <div class="grid-three">
-      <div>
-        <h3>This is a step</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      </div>
-      <div>
-        <h3>This is a step</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      </div>
-      <div>
-        <h3>This is a step</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      </div>
+  <div class="bg-primary">
+    <div class="wrap">
+        <h2>Learn More</h2>
+        <p>Do you want to spend more time creating apps and less time managing the platform?</p>
+        <div class="grid-two">
+          <div>
+            <a href="https://github.com/rancher/rio#quick-start" target="blank">Install Rio</a> 
+          </div>
+          <div>
+            <a href="https://info.rancher.com/introducing-rio" target="blank">Watch the Meetup</a>
+          </div>
+        </div>
     </div>
   </div>
 </section>
