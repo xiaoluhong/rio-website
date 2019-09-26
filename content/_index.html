@@ -1,290 +1,92 @@
 ---
-title: "Rio - The MicroPaaS for Kubernetes"
+title: "Rio"
+description: "Fun, simple, powerful. Containers at their best."
 ---
 
-  <section>
-
-    <div class="hero jumbotron text-center">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-12">
-            <h1 class="hero-text">The MicroPaaS for Kubernetes</h1>
-            <h2 class="hero-subtext">Build, test, deploy, scale, and version stateless apps in any Kubernetes cluster.</h2>
-            <br>
-            <br>
-            <div>
-              <button class="download-now">
-                <a class="download-now-text" href="https://github.com/rancher/rio#quick-start">Install Rio</a>
-              </button>
-              <button class="join-meetup">
-                <a href="https://info.rancher.com/introducing-rio">Watch the Meetup</a>
-              </button>
-            </div>
-          </div>
+  <section class="intro">
+    <div class="bg-primary">
+      <div class="wrap grid-two">
+        <div>
+          <h1>The MicroPaaS for Kubernetes</h1>
+          <h4>Build, test, deploy, scale, and version stateless apps in any Kubernetes cluster.</h4>
+          <a href="https://info.rancher.com/introducing-rio" class="btn" target="_blank" rel="noopener">Learn More</a>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="overview">
-    <div class="container padding" style="padding-top: 100px;">
-      <div class="col-lg-9">
-        <h2 class="title-text">
-          What's a MicroPaas?
-        </h2>
-        <br>
-        <p class="lead">
-          A MicroPaaS is a lightweight framework that bridges the gap between IT infrastructure and the developer. Its
-          modular architecture delivers a fully integrated experience from pipeline to operations without taking over the
-          cluster. Built for multi-tenancy, a MicroPaaS like Rio will run on any Kubernetes cluster in any substrate...even on
-          your laptop.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section style="background-color: #f9f9f9">
-    <div class="container padding">
-      <div class="row">
-        <div class="col-lg-12 padding">
-          <h2 class="title-text">
-            How Is Rio Built?
-          </h2>
-          <br>
-          <p class="lead">
-            Rio creates an experience on Istio and Knative and presents an easy way to manage every aspect of your application.
-          </p>
-          <br>
-          <div class="col-lg-9 center">
-            <img src="/images/diagram.png" width="100%" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-            <h3 id="features-header">Rio  Includes</h3>
-        </div>
-        <div class="col-lg-6">
-          <ul class="features-list">
-            <li>Automatic DNS and HTTPS</li>
-            <li>HTTP Load Balancing</li>
-            <li>HTTP Routing</li>
-            <li>HTTP Metrics</li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <ul class="features-list">
-            <li>Autoscaling</li>
-            <li>Canary Deployments</li>
-            <li>Git-Triggered Deployments</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cable-car">
-    <div class="container padding">
-      <div class="benefits padding">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="title-text">
-              Why Use Rio?
-            </h2>
-            <br />
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="circle-icon">
-              <img class="icon" src="/images/manage-apps.svg" alt="" />
-            </div>
-            <br>
-            <h2 class="subtitle-text">
-              Create Apps, Not the Platform
-            </h2>
-            <p>
-              Rio installs into any Kubernetes cluster and handles all the wiring for common services like Istio for
-              service mesh, Knative for creating event functions, and Prometheus for monitoring.
-            </p>
-            <p>
-              With a few simple commands, Rio can implement Git-based continuous delivery; help optimize routing for
-              your apps; give you canary, A/B, and blue/green deployments; monitor HTTP traffic inside your service
-              mesh; deliver smart autoscaling; and more.
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="circle-icon">
-              <img class="icon" src="/images/shield.svg" alt="" />
-            </div>
-            <br>
-            <h2 class="subtitle-text">
-              Streamline Your Release Pipeline
-            </h2>
-            <p>
-              Rio helps you deliver the best possible application release experience to your users.
-              <ul>
-                <li>Tell Rio to automatically build and deploy new app releases when you commit changes to your
-                  repository.</li>
-                <li>When rolling out new versions of your app, Rio understands the current load and scales up for
-                  maximum performance using Layer 4 and Layer 7 metrics from Prometheus.</li>
-              </ul>
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="circle-icon">
-              <img class="icon" src="/images/ux-design.svg" alt="" />
-            </div>
-            <br />
-            <h2 class="subtitle-text">
-              Maximum Security by Default
-            </h2>
-            <p>
-              When using Rio, your apps launch with the most secure network configuration possible.
-              <ul>
-                <li>Your workloads receive a DNS record and a wildcard certificate from LetsEncrypt.</li>
-                <li>Rio also integrates with Kubernetes RBAC for maximum security.</li>
-                <li>Your apps will automatically include resource constraints for optimal cluster performance.</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="background-color: #f9f9f9">
-    <div class="container padding">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 class="title-text">
-            How Does It Work?
-          </h2>
-          <br>
-          <p class="lead">
-            In this video quickstart, we show you how easy it is to install Rio and start deploying and upgrading
-            services without having to manage Kubernetes, Istio, or Knative. Watch and see how easy it is.
-          </p>
-        </div>
-
-        <div class="col-lg-12">
-          <div class='embed-container'>
-            <<iframe src="https://www.youtube.com/embed/ciW5j8jghBQ" frameborder="0"
-              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="ticket">
-    <div class="container padding">
-      <div class="row">
-        <!-- <div class="col-lg-3 logo-white center" style="padding-bottom: 25px;">
-	  		  <img src="/images/ticket.svg" alt=""/>
+  
+        <!-- <div class="video-responsive">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
         </div> -->
-        <div class="col-lg-12 col-md-6 col-sm-12 center">
-          <h3 class="lead bullet" id="ticket-lead">
-            Ready to get started? Rio is a quick install, and you can get right to using it.
-          </h3>
-          <button id="ticket-cta" class="download-now">
-            <a class="download-now-text" href="https://github.com/rancher/rio#quick-start">Install Rio</a>
-          </button>
-        </div>
       </div>
     </div>
-  </section>
-  <section class="we-built-Rio">
-    <div class="container padding" style="padding-top: 100px;">
-      <div class="row">
-        <div class="col-lg-4 logo-white padding">
-          <img src="/images/rancher-labs-stacked-white.svg" alt="Rancher Labs" />
-        </div>
-        <div class="col-lg-8 padding">
-          <p class="lead" style="font-size: 22px">
-            At Rancher Labs, all of our products are focused on making Kubernetes simple to use for everybody.
-            <br>
-            <br>
-            We saw how people were frustrated by the effort required to manage tools like Istio and Knative, so we built Rio. Now developers can deploy, manage, scale, and version their applications with a few simple commands.
-            <br>
-          </p>
-          <br>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="laptop-bg">
-    <div class="steps padding text-center">
-      <div class="container padding">
-        <div class="row">
-          <div class="col-lg-12 padding">
-            <h2 class="title-text">
-              How To Get Started
-            </h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="circle-step">
-              <p class="step-text">Step 1</p>
-            </div>
-            <br>
-            <h2 class="subtitle-text">
-              Deploy Rio into a Kubernetes Cluster
-            </h2>
-
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="circle-step">
-              <p class="step-text">Step 2</p>
-            </div>
-            <br>
-            <h2 class="subtitle-text">
-              Define a <a href="https://github.com/rancher/rio#quick-start">Service</a>
-            </h2>
-
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="circle-step">
-              <p class="step-text">Step 3</p>
-            </div>
-            <br>
-            <h2 class="subtitle-text">
-              Scale and Promote a New Version
-            </h2>
-
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-12 col-md-6 col-sm-12">
-            <h2 class="easy-step-text">That’s it! With just a few commands, you'll be up and running with Istio and a simple set of instructions that deliver powerful results for app deployment.</h2>
-
-            <!-- <button class="download-now" id="get-started-cta-button">
-              <a class="download-now-text" href="https://github.com/rancher/rio#quick-start">Install Rio</a>
-            </button> -->
-          </div>
-        </div>
+  
+    <div class="folder">
+      <h4>Great For</h4>
+      <div class="bg-light grid-three text-center">
+        <h5>Automatic DNS and HTTPS</h5>
+        <h5>HTTP Load Balancing, routing, and metrics</h5>
+        <h5>Autoscaling</h5>
+        <h5>Canary Deployments</h5>
+        <h5>Git-Triggered Deployments</h5>
       </div>
     </div>
   </section>
 
+<section class="wrap">
+  <h2>Why Use Rio</h2>
+  <div class="grid-three">
+    <div>
+      <h5>Create Apps, Not the Platform</h5>
+      <p>Rio installs into any Kubernetes cluster and handles all the wiring for common services like Istio for service mesh, Knative for creating event functions, and Prometheus for monitoring.</p>
+      <p>With a few simple commands, Rio can implement Git-based continuous delivery; help optimize routing for your apps; give you canary, A/B, and blue/green deployments; monitor HTTP traffic inside your service mesh; deliver smart autoscaling; and more.</p>
+    </div>
+      
+    <div>
+      <h5>Streamline Your Release Pipeline</h5>
+      <p>Rio helps you deliver the best possible application release experience to your users.</p>
+      <ul>
+        <li>Tell Rio to automatically build and deploy new app releases when you commit changes to your repository.</li>
+        <li>When rolling out new versions of your app, Rio understands the current load and scales up for maximum performance using Layer 4 and Layer 7 metrics from Prometheus.</li>
+      </ul>
+    </div>
 
-  <section class="callout">
-    <div class="jumbotron text-center mountain">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="title-text logo-white">Do you want to spend more time creating apps and less time managing the platform?</h2>
-            <br>
-            <br>
-            <div>
-              <button class="download-now" style="border: 3px solid white;">
-                <a class="download-now-text" href="https://github.com/rancher/rio#quick-start">Install Rio</a>
-              </button>
-              <button class="join-meetup">
-                <a href="https://info.rancher.com/introducing-rio">Watch the Meetup</a>
-              </button>
-            </div>
+    <div>
+      <h5>Maximum Security by Default</h5>
+      <p>When using Rio, your apps launch with the most secure network configuration possible.</p>
+      <li>Your workloads receive a DNS record and a wildcard certificate from LetsEncrypt.</li>
+      <li>Rio also integrates with Kubernetes RBAC for maximum security.</li>
+      <li>Your apps will automatically include resource constraints for optimal cluster performance.</li>
+    </div>
+    
+  </div>
+</section>
+<hr/>
+<section class="wrap">
+  <h2>How it Works</h2>
+  <!-- <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> -->
+  <img src="../images/how-it-works-rio.svg" alt="{{ .Site.Title }}">
+</section>
+
+<section class="get-started">
+  <div class="white text-center">
+    <h2>Get Started</h2>
+    <div class="grid-three">
+      <h4>Deploy Rio into a kubernetes cluster</h4>
+      <h4>Define a service</h4>
+      <h4>Scale and promote a new version</h4>
+    </div>
+    <p>That’s it! With just a few commands, you'll be up and running with Istio and a simple set of instructions that deliver powerful results for app deployment.</p>
+  </div>
+  <div class="bg-primary">
+    <div class="wrap">
+        <h2>Learn More</h2>
+        <p class="text-center">Do you want to spend more time creating apps and less time managing the platform?</p>
+        <div class="grid-two">
+          <div>
+            <a href="https://github.com/rancher/rio#quick-start" target="blank" class="btn">Install Rio</a> 
+          </div>
+          <div>
+            <a href="https://info.rancher.com/introducing-rio" target="blank" class="btn">Watch the Meetup</a>
           </div>
         </div>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
