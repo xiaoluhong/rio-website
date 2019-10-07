@@ -1,0 +1,14 @@
+{
+  "name": "rio-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "./scripts/dev",
+    "dev-theme": "./scripts/dev -t ../projects-theme"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jsdom": "^15.1.0",
+    "md5": "^2.2.1"
+  }
+}

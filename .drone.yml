@@ -12,7 +12,7 @@ steps:
   image: plugins/docker
   settings:
     context: .
-    dockerfile: Dockerfile
+    dockerfile: Dockerfile.prod
     dry_run: true
     repo: rancherlabs/rio-website
     password:
@@ -22,6 +22,63 @@ steps:
   when:
     event:
     - pull_request
+
+---
+kind: pipeline
+name: dev
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: publish-dev
+  pull: default
+  image: plugins/docker
+  settings:
+    context: .
+    dockerfile: Dockerfile.dev
+    group: publish
+    repo: rancherlabs/rio-website
+    tag: dev
+    password:
+      from_secret: docker_password
+    username:
+      from_secret: docker_username
+  when:
+    branch:
+    - master
+    event:
+    - push
+
+
+---
+kind: pipeline
+name: staging
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: publish-staging
+  pull: default
+  image: plugins/docker
+  settings:
+    context: .
+    dockerfile: Dockerfile.staging
+    group: publish
+    repo: rancherlabs/rio-website
+    tag: staging
+    password:
+      from_secret: docker_password
+    username:
+      from_secret: docker_username
+  when:
+    branch:
+    - staging
+    event:
+    - push
 
 ---
 kind: pipeline
@@ -37,7 +94,7 @@ steps:
   image: plugins/docker
   settings:
     context: .
-    dockerfile: Dockerfile
+    dockerfile: Dockerfile.prod
     group: publish
     repo: rancherlabs/rio-website
     tag: latest
