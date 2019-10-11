@@ -22,6 +22,9 @@ notAlternative = true
 vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
 params = ["categories", "tags"]
 
+[params]
+  github = "https://github.com/rancher/rio/blob/master/README.md#quick-start"
+
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
 
@@ -33,9 +36,8 @@ home = ["HTML", "RSS", "Algolia"]
     simple = true
 
 [menu]
-
   [[menu.main]]
-    identifier = "docs"
-    name = "Docs"
-    url = "https://github.com/rancher/rio/blob/master/README.md#quick-start"
-    weight = -110
+    #identifier = "docs"
+    #name = "Docs"
+    #url = "https://github.com/rancher/rio/blob/master/README.md#quick-start"
+    #weight = -110
