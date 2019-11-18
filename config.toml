@@ -28,16 +28,8 @@ params = ["categories", "tags"]
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
 
-
 [privacy]
   [privacy.twitter]
     disable = false
     enableDNT = false
     simple = true
-
-[menu]
-  [[menu.main]]
-    #identifier = "docs"
-    #name = "Docs"
-    #url = "https://github.com/rancher/rio/blob/master/README.md#quick-start"
-    #weight = -110
