@@ -28,6 +28,7 @@ params = ["categories", "tags"]
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
 
+
 [privacy]
   [privacy.twitter]
     disable = false
