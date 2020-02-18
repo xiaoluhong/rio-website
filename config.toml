@@ -1,0 +1,35 @@
+baseURL = ""
+languageCode = "en-us"
+title = "rio"
+theme = "projects-theme"
+pluralizeListTitles = false
+enableRobotsTXT = true
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+enableGitInfo = true
+
+[blackfriday]
+fractions = false
+#hrefTargetBlank = true
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlaintext = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"]
+
+[params]
+  github = "https://github.com/rancher/rio/blob/master/README.md#quick-start"
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
+[privacy]
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = true

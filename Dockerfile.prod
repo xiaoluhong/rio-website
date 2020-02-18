@@ -1,0 +1,26 @@
+FROM rancherlabs/rio-website:build as build
+ENV HUGO_ENV production
+
+WORKDIR /run
+
+COPY config.toml /run/
+COPY archetypes archetypes
+COPY assets assets
+COPY data data
+COPY layouts layouts
+COPY scripts scripts
+COPY content content
+COPY static static
+COPY .git .git
+
+ADD https://github.com/rancherlabs/projects-theme/archive/master.tar.gz /run/master.tar.gz
+RUN mkdir -p /output /run/themes/projects-theme && tar -xzf /run/master.tar.gz -C /run/themes/projects-theme --strip=1 && rm /run/master.tar.gz
+
+RUN ["hugo", "--buildFuture", "--baseURL=https://rio.io", "--destination=/output"]
+
+# Make sure something got built
+RUN stat /output/index.html
+
+FROM nginx:alpine
+COPY --from=build /output /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
