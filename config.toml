@@ -6,7 +6,7 @@ pluralizeListTitles = false
 enableRobotsTXT = true
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
-enableGitInfo = true
+enableGitInfo = false
 
 [blackfriday]
 fractions = false
